@@ -18,7 +18,7 @@ This project implements a **queue data structure** in C++ using an **array**. It
 
 ## Output Format
 - Each **`pop`** operation prints the front element of the queue.
-
+---
 # 2- Round Table Elimination Game
 Code File Name:
 
@@ -60,7 +60,7 @@ where:
 - \( C(1) = 1 \)
 - \( C(2) = 2 \), and so on.
 
----
+
 
 ## Implementation Details  
 1. **Read** an even integer `n` (total number of people).  
@@ -69,7 +69,7 @@ where:
 4. **Store intermediate results** in an array to **avoid redundant calculations**.  
 5. **Print the result** as the number of valid handshaking ways.
 
----
+
 
 ## Time Complexity  
 - The implementation runs in **O(n²)** time because:  
