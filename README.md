@@ -51,6 +51,13 @@ This problem is a classic example of the **Catalan Number** sequence, which coun
 ### Formula  
 The number of valid handshaking ways is given by the **n-th Catalan number**:
 
+C(n)= 
+i=0
+∑
+n−1
+​
+ C(i)×C(n−i−1)
+
 \[
 C(n) = \sum_{i=0}^{n-1} C(i) \times C(n-i-1)
 \]
