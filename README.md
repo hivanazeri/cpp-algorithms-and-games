@@ -1,68 +1,68 @@
-# 1- Queue Implementation in C++
-Code File Name: SimpleQueue.cpp
+# C++ Coding Assignment 01
 
-## Description
-This project implements a **queue data structure** in C++ using an **array**. It processes a series of commands to perform queue operations, strictly using an array for storage.
+This repository contains solutions to four algorithmic problems implemented in C++. Each problem is solved in a separate `.cpp` file.
 
-## Features
-- Implements a **queue** using an **array**.
-- Supports **`push`** and **`pop`** operations.
-- Reads a sequence of operations and processes them **sequentially**.
-- Outputs the value of each **popped** element.
+##  Problem Descriptions
 
-## Input Format
-1. The first line contains an **integer** `n`, representing the number of commands.
-2. The next `n` lines contain queue commands:
-   - **`push x`** → Inserts `x` into the queue.
-   - **`pop`** → Removes and prints the front element of the queue.
+### 1. **Handshaking (`handing.cpp`)**
+   - **Description**: Given `n` pairs of friends sitting in a circular arrangement, the goal is to find the number of ways they can shake hands such that no two handshakes cross.
+   - **Complexity**: `O(n^2)`
+   - **Input**: A single integer `n`, representing the number of pairs.
+   - **Output**: The number of valid handshaking arrangements.
+   - **Example**:
+     ```
+     Input: 4
+     Output: 2
+     ```
 
-## Output Format
-- Each **`pop`** operation prints the front element of the queue.
----
-# 2- Round Table Elimination Game
-Code File Name: Handing
+### 2. **Simple Queue (`SimpleQueue.cpp`)**
+   - **Description**: Implements a queue using an array with `push` and `pop` operations.
+   - **Input**:
+     - The first line contains an integer `n` (number of operations).
+     - Each of the next `n` lines contains a command: `"push x"` or `"pop"`.
+   - **Output**: When `"pop"` is called, the dequeued element is printed.
+   - **Example**:
+     ```
+     Input:
+     6
+     push 1
+     push -4
+     pop
+     push 3
+     push 5
+     pop
+     
+     Output:
+     1
+     -4
+     ```
 
-## Description
-This program simulates a **round table elimination game**. The game follows these rules:
-- `n` friends sit in a **circle**.
-- A **counting rhyme** with `k` words is recited.
-- Starting from a given position, counting proceeds **clockwise**.
-- The person on whom the rhyme **ends** is eliminated.
-- The process repeats until **only one person remains**, who is declared the **winner**.
+### 3. **Remove Repeating Characters (`NoRepeat.cpp`)**
+   - **Description**: Given a string, repeatedly remove consecutive repeating characters until no such subsequences exist.
+   - **Input**: A single string (max length 150).
+   - **Output**: The modified string after all removals.
+   - **Example**:
+     ```
+     Input: abbaca
+     Output: ca
+     ```
 
-## Input Format
-The program reads two integers from **standard input**:
-1. `n` → Number of players sitting in a circle.
-2. `k` → Number of words in the rhyme.
+### 4. **Elimination Game (`Game.cpp`)**
+   - **Description**: `n` friends play a counting-out game (like Josephus problem). Counting `k` steps clockwise, the person at position `k` is eliminated. The last remaining person wins.
+   - **Input**: Two integers `n` (number of players) and `k` (count step).
+   - **Output**: The index of the winner.
+   - **Example**:
+     ```
+     Input: 5 2
+     Output: 3
+     ```
 
-## Output Format
-- The program prints the **number of the last remaining player**.
+## How to Compile and Run
 
-# 3- Handshaking Problem - 
-Code File Name: Handing
+Each program can be compiled and executed using a C++ compiler (`g++` or `clang++`).
 
-## Problem Description  
-A group of friends, sitting in a **circular arrangement**, want to shake hands. The number of friends is always **even**, and the goal is to determine the **number of ways** they can shake hands **without any two handshakes crossing**.
-
----
-
-## Solution Approach  
-This problem is a classic example of the **Catalan Number** sequence, which counts the number of valid ways to form non-crossing pairs.
-
-### Formula  
-The number of valid handshaking ways is given by the **n-th Catalan number**.
-
-## Implementation Details  
-1. **Read** an even integer `n` (total number of people).  
-2. **Divide** `n` by 2 to get the number of handshake **pairs**.  
-3. **Use dynamic programming** to compute the **Catalan number** up to `n/2`.  
-4. **Store intermediate results** in an array to **avoid redundant calculations**.  
-5. **Print the result** as the number of valid handshaking ways.
-
-
-
-## Time Complexity  
-- The implementation runs in **O(n²)** time because:  
-  - The **outer loop** runs `n/2` times.  
-  - The **inner loop** performs a summation over previous values, leading to **quadratic complexity**.
-
+```sh
+g++ handing.cpp -o handing && ./handing
+g++ SimpleQueue.cpp -o SimpleQueue && ./SimpleQueue
+g++ NoRepeat.cpp -o NoRepeat && ./NoRepeat
+g++ Game.cpp -o Game && ./Game
