@@ -49,25 +49,7 @@ A group of friends, sitting in a **circular arrangement**, want to shake hands. 
 This problem is a classic example of the **Catalan Number** sequence, which counts the number of valid ways to form non-crossing pairs.
 
 ### Formula  
-The number of valid handshaking ways is given by the **n-th Catalan number**:
-
-C(n)= 
-i=0
-∑
-n−1
-​
- C(i)×C(n−i−1)
-
-\[
-C(n) = \sum_{i=0}^{n-1} C(i) \times C(n-i-1)
-\]
-
-where:
-- \( C(0) = 1 \)
-- \( C(1) = 1 \)
-- \( C(2) = 2 \), and so on.
-
-
+The number of valid handshaking ways is given by the **n-th Catalan number**.
 
 ## Implementation Details  
 1. **Read** an even integer `n` (total number of people).  
