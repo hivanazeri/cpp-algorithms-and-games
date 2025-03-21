@@ -29,12 +29,4 @@ This repository contains solutions to four algorithmic problems implemented in C
    - **Output**: The index of the winner.
    
 
-## How to Compile and Run
 
-Each program can be compiled and executed using a C++ compiler (`g++` or `clang++`).
-
-```sh
-g++ handing.cpp -o handing && ./handing
-g++ SimpleQueue.cpp -o SimpleQueue && ./SimpleQueue
-g++ NoRepeat.cpp -o NoRepeat && ./NoRepeat
-g++ Game.cpp -o Game && ./Game
